@@ -13,8 +13,8 @@ import java.util.List;
 public class PayloadService {
 
     public void handlePayload(HashMap<String,String> map){
-        //validate request from twilio is non-malicious
-        if(map.get("AccountSid") == null || !map.get("AccountSid").equals("TWILIO_ACCOUNT_SID")){
+        //validate request is actually from twilio is non-malicious
+        if(map.get("AccountSid") == null || !map.get("AccountSid").equals("YOUR_TWILIO_ACCOUNT_SID")){
           return;
         }
          Payload response = new Payload(map.get("Body"));

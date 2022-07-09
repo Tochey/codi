@@ -2,7 +2,6 @@ import './App.css';
 import React, {useState, useEffect} from "react";
 import Main from "./components/Main";
 import { Button } from 'reactstrap';
-import { useCookies } from 'react-cookie';
 
 
 
