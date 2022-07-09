@@ -1,4 +1,4 @@
-package com.example.fsptwillio.model;
+package com.example.fsptwillio.payload;
 
 
 import lombok.AllArgsConstructor;
@@ -17,14 +17,14 @@ public class Payload {
     private String sender;
 
     public static List<Payload> list = new ArrayList<>();
-    public  static Deque<Payload> queue = new LinkedList<>();
+    public static Deque<Payload> queue = new LinkedList<>();
 
 
-    public Payload(String body){
-        Date dNow = new Date( );
+    public Payload(String body) {
+        Date dNow = new Date();
         SimpleDateFormat ft =
                 new SimpleDateFormat("hh:mm:ss a ");
-        Date bNow = new Date( );
+        Date bNow = new Date();
         SimpleDateFormat gt =
                 new SimpleDateFormat("MM/dd");
 
@@ -32,25 +32,26 @@ public class Payload {
         this.time = ft.format(dNow);
         this.date = gt.format(bNow);
 
-        this.sender = inferSender(this.body);
-        if(queue.size() == 15){
+        this.sender = detectSender(this.body);
+        if (queue.size() == 15) {
             queue.removeLast();
         }
         queue.addFirst(this);
     }
-public String inferSender(String body){
+
+    public String detectSender(String body) {
         List<String> possibleSenders = List.of(
                 "Apple", "Network Solutions", "QuickBooks",
                 "Cisco Meraki", "ADP", "LastPass",
-                "Microsoft", "Google", "Amazon" ,
+                "Microsoft", "Google", "Amazon",
                 "LogicMonitor", "Verizon", "AT&T");
-        for(String e : possibleSenders){
-            if(body.contains(e)){
+        for (String e : possibleSenders) {
+            if (body.contains(e)) {
                 return e;
             }
         }
 
         return "Cant infer sender";
-}
+    }
 
 }

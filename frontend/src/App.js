@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState, useEffect} from "react";
-import Main from "./components/Main";
+import InfoPage from "./components/InfoPage";
 import { Button } from 'reactstrap';
 
 
@@ -59,7 +59,7 @@ function App() {
 
   const button = authenticated ?
       <div>
-          <Main />
+          <InfoPage />
       </div>
    :
       <Loginpage />

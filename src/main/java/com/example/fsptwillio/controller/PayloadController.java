@@ -1,6 +1,6 @@
 package com.example.fsptwillio.controller;
 
-import com.example.fsptwillio.model.Payload;
+import com.example.fsptwillio.payload.Payload;
 import com.example.fsptwillio.service.PayloadService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Deque;
 import java.util.HashMap;
-import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED_VALUE;
 
