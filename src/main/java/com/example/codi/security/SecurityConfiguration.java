@@ -1,4 +1,4 @@
-package com.example.fsptwillio.security;
+package com.example.codi.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,7 +1,7 @@
-package com.example.fsptwillio.controller;
+package com.example.codi.controller;
 
-import com.example.fsptwillio.payload.Payload;
-import com.example.fsptwillio.service.PayloadService;
+import com.example.codi.payload.Payload;
+import com.example.codi.service.PayloadService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;

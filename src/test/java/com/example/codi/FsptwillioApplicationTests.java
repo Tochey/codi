@@ -1,4 +1,4 @@
-package com.example.fsptwillio;
+package com.example.codi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

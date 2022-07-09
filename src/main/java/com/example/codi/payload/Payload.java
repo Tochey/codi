@@ -1,4 +1,4 @@
-package com.example.fsptwillio.payload;
+package com.example.codi.payload;
 
 
 import lombok.AllArgsConstructor;

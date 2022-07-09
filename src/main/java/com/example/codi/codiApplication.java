@@ -1,14 +1,14 @@
-package com.example.fsptwillio;
+package com.example.codi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class FsptwillioApplication {
+public class codiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FsptwillioApplication.class, args);
+        SpringApplication.run(codiApplication.class, args);
     }
 
 }
